@@ -1,0 +1,285 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<body>
+    <div class="super_container">
+
+
+        <header class="header">
+            <div class="header_overlay"></div>
+            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+
+                <!-- Logo -->
+                <div class="logo"><a href="#">Şikayet<span>Et</span><span></span></a></div>
+                <div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
+                    <nav class="main_nav">
+
+                    </nav>
+
+                    <div class="log_reg">
+                        <ul class="d-flex flex-row align-items-center justify-content-start">
+
+                            @if (!this.User.Identity.IsAuthenticated)//kullanıcı giriş yapmadıysa
+                            {
+                                <li class="active" data-toggle="modal" data-target="#loginModal"> <a href="">Giriş Yap</a></li>
+                                <li><a href="@Url.Action("Register", "Account")">Üye Ol</a></li>
+                            }
+
+                            @if (this.User.Identity.IsAuthenticated)//giriş yaptıysa
+                            {
+                                <li class="active"><a href="@Url.Action("LogOff", "Account")">Çıkış Yap</a></li>
+                            }
+
+                        </ul>
+                    </div>
+                    <div class="add_listing text-center trans_200"><a href="@Url.Action("Create", "Complaint")">Şikayet Yaz</a></div>
+                    <div class="hamburger">
+                        <i class="fa fa-bars trans_200"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+        <div class="super_container_inner">
+            <div class="super_overlay"></div>
+
+            <!-- Home -->
+
+            <div class="home">
+
+                <!-- Home Slider -->
+                <div class="home_slider_container">
+                    <div class="owl-carousel owl-theme home_slider">
+
+                        <!-- Slide -->
+                        <div class="slide">
+                            <div class="background_image" style="background-image:url(/Content/SiteSablon1/images/istanbul.jpg)"></div>
+
+                            <div class="home_container">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xl-8 offset-xl-2">
+                                            <div class="home_content text-center">
+                                                <div class="home_title"><h1>Çözüm<span>Bulalım</span></h1></div>
+                                                <div class="search_form_container">
+                                                    <form action="#" class="search_form" id="search_form">
+                                                        <div class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center justify-content-sm-between">
+                                                            <input type="text" class="search_input" placeholder="What are you looking for?" required="required">
+                                                            <button class="search_button">ARA</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Home Slider Dots -->
+
+
+                </div>
+            </div>
+
+
+
+
+         
+            <!-- Categories -->
+
+            
+
+            <!-- Locations -->
+
+            
+
+            <!-- şikayet haber kısmı -->
+
+            <div class="food container_custom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="section_title text-center"><h1>Şikayetler</h1></div>
+                            <div class="grid_container grid">
+
+                                <!-- Grid Item -->
+                                <div class="grid-item grid_large">
+                                    <div class="food_item">
+                                        <div class="food_item_tag"><a href="#">Fusion</a></div>
+                                        <div class="background_image" style="background-image:url(/Content/SiteSablon1/images/taksikaza.jpg)"></div>
+                                    </div>
+                                    
+                                </div>
+
+                                <!-- Grid Item -->
+                                <div class="grid-item grid_small">
+                                    <div class="food_item">
+                                        <div class="food_item_tag"><a href="#">Asian</a></div>
+                                        <div class="background_image" style="background-image:url(/Content/SiteSablon1/images/food_2.jpg)"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Grid Item -->
+                                <div class="grid-item grid_medium">
+                                    <div>
+                                        <div class="grid_half">
+                                            <div class="food_item">
+                                                <div class="food_item_tag"><a href="#">Breakfast</a></div>
+                                                <div class="background_image" style="background-image:url(/Content/SiteSablon1/images/food_3.jpg)"></div>
+                                            </div>
+                                        </div>
+                                        <div class="grid_half">
+                                            <div class="food_item">
+                                                <div class="food_item_tag"><a href="#">Pizza</a></div>
+                                                <div class="background_image" style="background-image:url(/Content/SiteSablon1/images/food_4.jpg)"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Grid Item -->
+                                <div class="grid-item grid_medium">
+                                    <div class="food_item">
+                                        <div class="food_item_tag"><a href="#">Vine & Dine</a></div>
+                                        <div class="background_image" style="background-image:url(/Content/SiteSablon1/images/food_5.jpg)"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Grid Item -->
+                                <div class="grid-item grid_small">
+                                    <div class="food_item">
+                                        <div class="food_item_tag"><a href="#">Coffee</a></div>
+                                        <div class="background_image" style="background-image:url(/Content/SiteSablon1/images/food_6.jpg)"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Grid Item -->
+                                <div class="grid-item grid_large">
+                                    <div class="food_item">
+                                        <div class="food_item_tag"><a href="#">Fine Dine</a></div>
+                                        <div class="background_image" style="background-image:url(/Content/SiteSablon1/images/food_7.jpg)"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How it works -->
+
+            <div class="how container_custom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="section_title text-center"><h1>How Directory<span>Plus+</span> works</h1></div>
+                            <div class="icon_box_container d-flex flex-row align-items-start justify-content-between flex-wrap">
+
+                                <!-- Icon Box -->
+                                <div class="icon_box d-flex flex-column align-items-center justify-content-start text-center">
+                                    <div class="icon_box_num">01.</div>
+                                    <div class="icon_box_icon"><img src="~/Content/SiteSablon1/images/icon_6.svg" alt="https://www.flaticon.com/authors/monkik"></div>
+                                    <div class="icon_box_title">Choose a category</div>
+                                    <div class="icon_box_text">
+                                        <p>Donec cursus, risus non fermentum lacinia, felis lectus interdum velit, in pulvinar enim justo at sem. Quisque ut semper neque. Suspendisse quam est</p>
+                                    </div>
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div class="icon_box d-flex flex-column align-items-center justify-content-start text-center">
+                                    <div class="icon_box_num">02.</div>
+                                    <div class="icon_box_icon"><img src="~/Content/SiteSablon1/images/icon_7.svg" alt="https://www.flaticon.com/authors/monkik"></div>
+                                    <div class="icon_box_title">Find your pick</div>
+                                    <div class="icon_box_text">
+                                        <p>Donec cursus, risus non fermentum lacinia, felis lectus interdum velit, in pulvinar enim justo at sem. Quisque ut semper neque. Suspendisse quam est</p>
+                                    </div>
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div class="icon_box d-flex flex-column align-items-center justify-content-start text-center">
+                                    <div class="icon_box_num">03.</div>
+                                    <div class="icon_box_icon"><img src="~/Content/SiteSablon1/images/icon_8.svg" alt="https://www.flaticon.com/authors/monkik"></div>
+                                    <div class="icon_box_title">Go & have fun</div>
+                                    <div class="icon_box_text">
+                                        <p>Donec cursus, risus non fermentum lacinia, felis lectus interdum velit, in pulvinar enim justo at sem. Quisque ut semper neque. Suspendisse quam est</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         
+
+
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Giriş</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" />
+                </div>
+                <div class="modal-body">
+                    <label for="pass">Şifre</label>
+                    <input type="password" name="pass" id="pass" class="form-control" />
+                </div>
+                <form >
+
+
+                    @{
+                        Html.RenderAction("Giris","Account");
+                     }
+                    <div class="modal-footer">
+                        <button type="button" name="login_button" id="login_button" class="btn btn-warning" data-dismiss="modal">Giriş</button>
+                    </div>
+                </form>
+                
+
+                <p>
+                    <a href="/Account/Register" style="margin-left:10px">Register as a new user</a>
+                </p>
+
+                <p>
+                    <a href="/Account/ForgotPassword" style="margin-left:10px;">Forgot your password?</a>
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Content/SiteSablon1/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/SiteSablon1/styles/bootstrap-4.1.2/popper.js"></script>
+    <script src="~/Content/SiteSablon1/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/greensock/TweenMax.min.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/greensock/TimelineMax.min.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/greensock/animation.gsap.min.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/easing/easing.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/progressbar/progressbar.min.js"></script>
+    <script src="~/Content/SiteSablon1/plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="~/Content/SiteSablon1/js/custom.js"></script>
+</body>

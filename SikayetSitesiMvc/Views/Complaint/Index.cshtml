@@ -1,0 +1,76 @@
+﻿@model IEnumerable<SikayetSitesiMvc.Models.Complaint>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TasitTuru)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CabStand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LineNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlateNo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            <img width="75" src="@item.Photo" />
+            @*@Html.DisplayFor(modelItem => item.Photo)*@
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TasitTuru)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CabStand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LineNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlateNo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ComplaintID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ComplaintID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ComplaintID })
+        </td>
+    </tr>
+}
+
+</table>
