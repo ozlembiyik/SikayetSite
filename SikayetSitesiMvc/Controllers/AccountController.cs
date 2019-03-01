@@ -229,7 +229,7 @@ namespace SikayetSitesiMvc.Controllers
         {
             return View();
         }
-
+        
         public ActionResult LogOut()
         {
             //logoftakini tasıdık.

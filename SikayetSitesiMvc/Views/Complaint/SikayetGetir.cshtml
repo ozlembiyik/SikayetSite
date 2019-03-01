@@ -1,0 +1,30 @@
+﻿@model List<SikayetSitesiMvc.Models.PhotoViewModel>
+
+        <div class="food container_custom">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section_title text-center"><h1>Şikayetler</h1></div>
+                     
+                        <div class="grid_container grid">
+                            @foreach (var item in Model)
+                            {
+                                <!-- Grid Item -->
+                                <div class="grid-item grid_large">
+                                    <div class="food_item">
+                                        <div class="food_item_tag"><a href="#">@item.Title</a></div>
+                                        <div class="background_image">
+                                        <img src="@Url.Content(item.Photo)" alt="Image" />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            }
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+  

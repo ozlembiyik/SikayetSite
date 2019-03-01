@@ -22,6 +22,18 @@ namespace SikayetSitesiMvc.Controllers
             return View(db.Complaints.ToList());
         }
 
+        public ActionResult SikayetGetir()
+        {
+            var result = (from a in db.Complaints
+                          select new PhotoViewModel(){
+                         Photo=  a.Photo,
+                          ComplaintID= a.ComplaintID,
+                    Title=a.Title
+                          }).OrderByDescending(x => x.ComplaintID).Take(6).ToList();
+            return PartialView(result);
+        }
+
+
         // GET: Complaint/Details/5
         public ActionResult Details(int? id)
         {

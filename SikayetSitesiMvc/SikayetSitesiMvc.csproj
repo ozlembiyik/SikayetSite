@@ -191,6 +191,7 @@
     <Compile Include="Models\Complaint.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PhotoViewModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -515,8 +516,20 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Tasit.js" />
+    <Content Include="Uploads\Photo\0d8a2546-4b47-491c-aa71-280c2d9eb239.jpg" />
+    <Content Include="Uploads\Photo\3000a131-812a-41a1-9482-674d7b1d9188.jpg" />
+    <Content Include="Uploads\Photo\3154ef51-ed21-468d-990c-7f53ae835acc.jpg" />
+    <Content Include="Uploads\Photo\3af1996e-cba8-4539-9b75-6a22d620a438.jpg" />
+    <Content Include="Uploads\Photo\3d876bc8-f141-4e28-94e7-87fb23795f9d.jpg" />
+    <Content Include="Uploads\Photo\4c37941d-7344-41a3-b531-6ebe84df9188.jpg" />
     <Content Include="Uploads\Photo\619f1239-89dc-4031-b884-dfb3287e4fb7.png" />
+    <Content Include="Uploads\Photo\aa0bfaf4-9cb2-40c3-8882-7e64a63b28c5.jpg" />
     <Content Include="Uploads\Photo\bf1e40df-b6e2-4abd-932d-b2c97bf79b8d.png" />
+    <Content Include="Uploads\Photo\c6ed7b17-b527-4e35-a2fb-66e09c8ff0df.jpg" />
+    <Content Include="Uploads\Photo\ccb43026-41c7-4150-a5a2-3065abca4f7b.jpg" />
+    <Content Include="Uploads\Photo\f9ca5bbd-7b5a-47fa-8b1b-28fd8a19513c.jpg" />
+    <Content Include="Uploads\Photo\fd94a489-fbb3-46ec-90e4-aac7b56e4a79.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -559,6 +572,7 @@
     <Content Include="Views\Complaint\Details.cshtml" />
     <Content Include="Views\Complaint\Edit.cshtml" />
     <Content Include="Views\Complaint\Index.cshtml" />
+    <Content Include="Views\Complaint\SikayetGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
